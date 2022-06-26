@@ -1,0 +1,63 @@
+# Lesson 1
+
+# Data Type/Structures/Classes & Objects
+
+int -> Integer
+float -> Floating Point Number
+double -> Double Precision Floating Point Number
+str -> Strings
+list -> List of Values
+obj -> Objects
+char -> Characters
+
+What you will be using the most: strings and lists
+
+But remember, EVERYTHING IN PYTHON IS AN OBJECT
+
+Objects are structures that consist of methods and attributes.
+They are a way to encapsulate data with associated ancillary data and functions.
+
+Say I want to build a car....what does a car have?
+
+Cars have -> Wheel, engine, door, window, gastank, color
+Cars do -> drive, brake, park
+
+Instead of 'custom ordering' a car's specifications every time we want a car template!
+We call that template a car 'class'.  Classes create objects.
+
+ex.
+
+class Car:
+      def init(self, wheel, engine, door, window, gastank, color):
+      	  self.wheel = wheel    # number of wheels
+	  self.engine = engine    # type of engine
+	  self.door = door    # number of doors
+	  self.window = window    # number of windows
+	  self.gas = gastank   # amount of fuel in car
+	  self.color = color   # color of car
+      # self.<some thing> -> creates object attribute.  i.e. some value associated with obj
+
+      def drive(self, speed, direction):
+          self.speed = speed
+	  # self.position = self.position + speed*distance <- uh-oh, what if distance and position don't exist?!?
+	  self.direction = direction
+      # def drive -> Method associated with the created Car obj
+
+'''...python code...'''
+   mycar = Car(4, 'v8', 2, 2, 100, 'green')
+   mycar.color -> computer return 'green'
+   mycar.door -> computer returns 2
+
+   mycar.drive(69, 'North') -> mycar.speed is now 69 and mycar.direction is now 'North'
+
+Going back to the definition of the self.drive method, let's make it useful!
+
+   def drive(self, speed, direction, distance):
+          self.speed = speed
+          #self.position = self.position + speed*distance 
+          if self.position is None:
+	     self.position = 0 + self.speed*distance
+          else:
+             self.position = self.speed*distance+self.position
+	  self.direction = direction
+      # def drive -> Method associated with the created Car obj
