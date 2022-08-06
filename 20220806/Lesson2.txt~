@@ -1,0 +1,36 @@
+# Lesson 2
+
+# Classes and Objects
+
+'''A class is a description of a type of data structure made up of other data structures.
+The two primary parts that make up a class are:
+-Attributes -> A variable or fixed value
+-Methods -> A function'''
+
+class Car:
+      def init(self, wheel, engine, door, window, gastank, colour):
+      	  self.wheel = wheel    # number of wheels
+          self.engine = engine    # type of engine
+          self.door = door    # number of doors
+          self.window = window    # number of windows
+          self.gas = gastank   # amount of fuel in car
+          self.color = color   # color of car
+
+'''A "Class" is like a blueprint - it tells you how to make something.  An "Object" is the thing that gets made'''
+
+myCar = Car(4, True, 4, 4, 'Full', 'Green)
+
+# myCar is a created object from the class Car
+
+#### EVERYTHING IN PYTHON IS AN OBJECT!  ####
+# Which is why this is important ;)
+
+# For example, the "string" data type":
+
+#"the dog" "is black"
+#"the dog"+"is black"
+#=? the dogis black 
+#=? the do(g)+(i)s black
+
+greetings = "Hello, I am com-pu-tor"
+ 
